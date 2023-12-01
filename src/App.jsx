@@ -1,19 +1,8 @@
-import "./App.css";
-import styled from "styled-components";
-
-const Title = styled.h1`
-  font-size: 3em;
-  line-height: 1.1;
-  text-align: center;
-  color: #aaa;
-`;
-
-function App() {
+const App = () => {
   return (
     <>
-      <Title>Emre Memis</Title>
+      <h1>Emre Memis</h1>
     </>
   );
-}
-
+};
 export default App;
