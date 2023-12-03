@@ -1,14 +1,14 @@
 import { ThemeProvider } from "styled-components";
-import UbuntuTheme from "./UbuntuTheme";
 import GlobalStyles from "./GlobalStyles";
+import WebsiteTheme from "./WebsiteTheme";
 
-const UbuntuProvider = ({ children }) => {
+const WebsiteProvider = ({ children }) => {
   return (
-    <ThemeProvider theme={UbuntuTheme}>
+    <ThemeProvider theme={WebsiteTheme}>
       <GlobalStyles />
       {children}
     </ThemeProvider>
   );
 };
 
-export default UbuntuProvider;
+export default WebsiteProvider;

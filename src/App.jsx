@@ -1,9 +1,9 @@
+import Website from "./Website";
 import Ubuntu from "./Ubuntu";
-
 const App = () => {
   return (
     <>
-      <Ubuntu />
+      <Website />
     </>
   );
 };

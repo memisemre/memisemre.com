@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components";
-import UbuntuTheme from "./UbuntuTheme";
+import WebsiteTheme from "./WebsiteTheme";
 
-const _ = UbuntuTheme;
+const _ = WebsiteTheme;
 
 const GlobalStyles = createGlobalStyle`
   body {
     font-family: ${_.fontFamily.join(" , ")};
-    color: ${_.colors.primary}
+    color: ${_.colors.primary};
   }
 `;
 
