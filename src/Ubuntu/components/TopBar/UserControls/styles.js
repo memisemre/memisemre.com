@@ -3,8 +3,12 @@ import styled from "styled-components";
 export const UserControlsWrapper = styled.div`
   display: flex;
   flex: 1;
-  align-items: center;
   justify-content: end;
+`;
+
+export const UserControlsInner = styled.div`
+  display: flex;
+  align-items: center;
   transition: 0.25s all ease;
   cursor: pointer;
   padding: 2px 12px;

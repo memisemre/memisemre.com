@@ -7,4 +7,11 @@ export const DateDisplayWrapper = styled.div`
 `;
 export const DateDisplayText = styled.p`
   font-size: 14px;
+  cursor: pointer;
+  padding: 2px 12px;
+  border-radius: 8px;
+  transition: 0.25s all ease;
+  &:hover {
+    background-color: #333333;
+  }
 `;

@@ -1,16 +1,16 @@
-import { UserControlsWrapper } from "./styles";
+import { UserControlsWrapper, UserControlsInner } from "./styles";
 import { MdNetworkWifi } from "react-icons/md";
 import { FaVolumeHigh, FaPowerOff } from "react-icons/fa6";
 
 const UserControls = () => {
   return (
-    <>
-      <UserControlsWrapper>
+    <UserControlsWrapper>
+      <UserControlsInner>
         <MdNetworkWifi />
         <FaVolumeHigh />
         <FaPowerOff />
-      </UserControlsWrapper>
-    </>
+      </UserControlsInner>
+    </UserControlsWrapper>
   );
 };
 export default UserControls;
