@@ -1,7 +1,9 @@
+import Ubuntu from "./Ubuntu";
+
 const App = () => {
   return (
     <>
-      <h1>Emre Memis</h1>
+      <Ubuntu />
     </>
   );
 };
