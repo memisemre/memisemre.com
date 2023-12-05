@@ -1,18 +1,8 @@
-import { useEffect } from "react";
 import { DateDisplayWrapper, DateDisplayText } from "./style";
-import { useState } from "react";
-import { formattedDate } from "./utils";
+import useCurrentDate from "../../../../../hooks/currentDate/useCurrentDate";
 
 const DateDisplay = () => {
-  const [currentDate, setCurrentDate] = useState(formattedDate(new Date()));
-
-  useEffect(() => {
-    const dataInterval = setInterval(() => {
-      setCurrentDate(formattedDate(new Date()));
-    }, 1000);
-    return () => clearInterval(dataInterval);
-  }, []);
-
+  const currentDate = useCurrentDate();
   if (currentDate != null) {
     return (
       <DateDisplayWrapper>
