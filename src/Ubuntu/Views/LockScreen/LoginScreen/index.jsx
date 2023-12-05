@@ -3,7 +3,6 @@ import { LoginScreenWrapper } from "./style";
 import { useState } from "react";
 const LoginScreen = ({ isClicked }) => {
   const [startAnimation, setStartAnimation] = useState(false);
-
   useEffect(() => {
     setTimeout(() => {
       setStartAnimation(true);

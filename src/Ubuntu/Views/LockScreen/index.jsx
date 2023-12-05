@@ -1,29 +1,16 @@
-import { useState } from "react";
 import WelcomePage from "./WelcomePage";
 import { OutWrapper } from "./style";
-import { useEffect } from "react";
-import LoginScreen from "./LoginScreen";
-const LockScreen = () => {
-  const [clicked, setClicked] = useState(false);
+import { useState, useEffect } from "react";
+const LockScreen = ({ isClicked }) => {
+  const [display, setDisplay] = useState(false);
   useEffect(() => {
-    const handleUserInteraction = () => {
-      setClicked(true);
-      document.removeEventListener("click", handleUserInteraction);
-      document.removeEventListener("keydown", handleUserInteraction);
-    };
-
-    document.addEventListener("click", handleUserInteraction);
-    document.addEventListener("keydown", handleUserInteraction);
-
-    return () => {
-      document.removeEventListener("click", handleUserInteraction);
-      document.removeEventListener("keydown", handleUserInteraction);
-    };
-  }, []);
+    setTimeout(() => {
+      setDisplay(true);
+    }, 2000);
+  }, [isClicked]);
   return (
-    <OutWrapper>
-      <WelcomePage isClicked={clicked} />
-      <LoginScreen isClicked={clicked} />
+    <OutWrapper display={display}>
+      <WelcomePage isClicked={isClicked} />
     </OutWrapper>
   );
 };

@@ -12,7 +12,7 @@ export const WelcomePageWrapper = styled.div`
   justify-content: center;
   opacity: ${(props) => (props.clicked ? 0 : 1)};
   transition: max-height 1s ease, opacity 1s ease;
-
+  cursor: pointer;
   h1 {
     font-size: 64px;
   }
