@@ -1,10 +1,10 @@
 import { WelcomePageWrapper, ClickText } from "./style";
 import useCurrentDate from "../../../hooks/currentDate/useCurrentDate";
-
-const WelcomePage = () => {
+const WelcomePage = ({ isClicked }) => {
   const currentDate = useCurrentDate();
+
   return (
-    <WelcomePageWrapper>
+    <WelcomePageWrapper clicked={isClicked}>
       <h1>
         {currentDate.HOUR}:{currentDate.MINUTE}
       </h1>

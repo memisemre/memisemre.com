@@ -2,14 +2,21 @@ import styled, { keyframes } from "styled-components";
 
 export const WelcomePageWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
+  height: 100%;
+  max-height: ${(props) => (props.clicked ? "0" : "100vh")};
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: ${(props) => (props.clicked ? 0 : 1)};
+  transition: max-height 1s ease, opacity 1s ease;
+
   h1 {
     font-size: 64px;
   }
+
   p {
     font-size: 20px;
   }
