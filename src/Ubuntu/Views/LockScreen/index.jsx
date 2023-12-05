@@ -4,9 +4,11 @@ import { useState, useEffect } from "react";
 const LockScreen = ({ isClicked }) => {
   const [display, setDisplay] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      setDisplay(true);
-    }, 2000);
+    if (isClicked) {
+      setTimeout(() => {
+        setDisplay(true);
+      }, 2000);
+    }
   }, [isClicked]);
   return (
     <OutWrapper display={display}>

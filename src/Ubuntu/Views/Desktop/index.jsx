@@ -7,11 +7,12 @@ const Desktop = ({ isClicked }) => {
   const [display, setDisplay] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setDisplay(true);
-    }, 2000);
+    if (isClicked) {
+      setTimeout(() => {
+        setDisplay(true);
+      }, 2000);
+    }
   }, [isClicked]);
-
   return (
     <DesktopWrapper display={display}>
       <TopBar />
