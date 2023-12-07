@@ -1,4 +1,3 @@
-import React from "react";
 import WebsiteProvider from "./styles/WebsiteProvider";
 const Website = () => {
   return (

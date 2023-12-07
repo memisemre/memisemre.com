@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import UbuntuProvider from "./styles/UbuntuProvider";
 import LockScreen from "./Views/LockScreen";
 import Desktop from "./Views/Desktop";
