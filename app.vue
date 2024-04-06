@@ -1,5 +1,15 @@
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <NuxtLoadingIndicator />
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
+<script lang="ts" setup>
+
+useHead({
+  title: "memisemre.com",
+})
+</script>
+
+
