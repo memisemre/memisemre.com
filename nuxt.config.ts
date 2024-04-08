@@ -1,21 +1,25 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  vite:{
+  vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "~/assets/scss/_colors.scss" as *;'
-        }
-      }
-    }
+          additionalData:
+            '@use "~/assets/scss/_colors.scss" as *;',
+        },
+      },
+    },
   },
-  css: ['~/assets/css/tailwind.css','~/assets/scss/base.scss'],
+  css: [
+    "~/assets/css/tailwind.css",
+    "~/assets/scss/base.scss",
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-
-})
+  modules: ["@nuxtjs/eslint-module"],
+  eslint: {},
+});
