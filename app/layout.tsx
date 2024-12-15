@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.scss';
+import MouseFollower from './components/MouseFollower';
 
 export const metadata: Metadata = {
   title: 'memisemre.com',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <MouseFollower />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
